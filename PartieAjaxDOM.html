@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Stefan Ristovski, Andrieu Girard, Mathieu Ouvrard -->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>TP 3IF Ajax</title>
+    <meta name="author" content="Stefan Ristovski, Andrieu Girard, Mathieu Ouvrard">
+
+    <script type="text/javascript" src="partieJavascript.js"></script>
+
+</head>
+
+<body> <h1>TP AJAX - Stefan Ristovski, Andrieu Girard, Mathieu Ouvrard</h1>
+    <p>
+        Bouton 1 : modifie la couleur de l'arriere plan de la page en bleu et la couleur du texte du bouton en blanc
+        <br />
+        <input name="button" type="button" id="myButton1" onClick="BckBlue();" value="1. Blue Background" />
+        <br />
+        Bouton 2 : remet la couleur de l'arriere plan en blanc
+        <br />
+        <input name="button2" type="button" id="myButton2" onClick="BckWhite();" value="2. White Background" />
+        <br />
+        Bouton 3 / Champ de saisi : affiche le nom officiel et la capitale du pays dont le code est selectionne dans le champ de saisie.
+        <br />
+        9 : completez le champ de saisie du bouton 3 avec une fonction d'autocompletion
+        <br />
+        <input name="button3" type="button" id="myButton3" onClick="Bouton3_XMLcountry('countriesTP.xml','xslbutton3.xsl',document.getElementById('myText1').value, 'ul');" value="3. Search by code cca2" />
+        <input name="text" type="text" id="myText1" value="Tapez un mot..." onKeyUp="check(this)" onChange="check(this)">
+        <br/>
+                <span id="recs">Recommendations: </span>
+        <br/>
+        <br />
+        Bouton 4: charge et afiche le dessin svg contenu dans le fichier : exemple.svg
+        <br/>
+        <input name="button4" type="button" id="myButton4" onClick="Bouton4_Image('exemple.svg');" value="4. Show shapes" />
+        <br />
+        Bouton 5 : rend les elements du fichier svg "clickables" et affiche la valeur de leur attribut title quand ils sont cliques
+        <br />
+        <input name="button5" type="button" id="myButton5" onClick="setClickable5();" value="5. Set Clickable" />
+        <br />
+        Bouton 6 : charge et affiche la carte du monde en svg contenu dans le fichier worldHigh.svg
+        <br />
+        <input name="button6" type="button" id="myButton5" onClick="Bouton4_Image('worldHigh.svg');" value="6. Show World Map" />
+        <br />
+        Bouton 7 : rend les pays clickables et affiche leur attribut title au click
+        <br />
+        <input name="button7" type="button" id="myButton7" onClick="setClickable7();" value="7. Make Map Clickable" />
+        <br />
+        Bouton 8 : captez l'evenement de passage et sorti de la souris sur les pays de la carte. Au passage: changez leur couleur et affichez leur : nom, capitale et drapeau dans un tableau au dessus de la carte
+        <br />
+        10 : completez les infromations affichees au bouton 8 avec le nom de la monnaie du pays
+        <br />
+        <input name="button8" type="button" id="myButton8" onClick="setMouse8();" value="8. Make Map Smart" />
+        <br />
+    </p>
+    <div>
+        <p><br/>
+            <span id="id_nom_a_remplacer" style="color: red; font-weight: bold;"> </span></p>
+    </div>
+    <div id="id_element_a_remplacer">
+        <p style="color: red; font-weight: bold;">This element will be replaced by the search result from Button 3.</p>
+    </div>
+    <div id="shape_name">
+        <p style="color: red; font-weight: bold;">This element will be replaced by a clickable action on an image.</p>
+    </div>
+    <div id="id_image">
+        <p style="color: red; font-weight: bold;">This element will be replaced by an image.</p>
+    </div>
+    
+
+
+</body>
+
+</html>
